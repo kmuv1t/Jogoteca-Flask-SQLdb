@@ -1,0 +1,31 @@
+{% extends "template.html" %}
+{% block conteudo %}
+      <form action="{{ url_for('atualizar') }}" method="post" enctype="multipart/form-data">
+        <figure class="thumb col-md-4">
+            <img class="img-responsive" src="{{ url_for('imagem', nome_arquivo=capa_jogo) }}">
+            <figcaption>
+                <label class="fileContainer">
+                    Mudar capa
+                    <input type="file" name="arquivo" accept=".jpg">
+                </label>
+            </figcaption>
+        </figure>
+        <input type="hidden" name="id" value="{{ jogo.id }}">
+        <fieldset>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" class="form-control" value="{{ jogo.nome }}">
+          </div>
+          <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <input type="text" id="categoria" name="categoria" class="form-control" value="{{ jogo.categoria }}">
+          </div>
+          <div class="form-group">
+            <label for="console">Console</label>
+            <input type="text" id="console" name="console" class="form-control" value="{{ jogo.console }}">
+          </div>
+          <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+          <a class="btn btn-danger" href="{{ url_for('index') }}">Voltar</a>
+        </fieldset>
+      </form>
+{% endblock %}
