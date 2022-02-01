@@ -1,10 +1,10 @@
-# Jogoteca Flask SQLdb
+# Flask GameLibrary
 
-Uma biblioteca de jogos utilizando MySQL e Flask
+A simple game library using Flask & MySQL
 
-Requisitos:
+Requirements:
 - flask
 - flask_mysqldb
 
-É uma ferramenta de criar, editar e armazenar dados em um DB.
-Feito a partir de estudos com Flask e MySQL.
+It is a tool to create, edit and store data in a DB.
+Made from studies with Flask and MySQL.
